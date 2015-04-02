@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration
+PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost/demoonetoone</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password"></property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<!-- pour utiliser C3P0 comme pool de connexion -->
+<property name="hibernate.c3p0.min_size">5</property>
+<property name="hibernate.c3p0.max_size">20</property>
+<property name="hibernate.c3p0.timeout">300</property>
+<property name="hibernate.c3p0.max_statements">50</property>
+<property name="hibernate.c3p0.idle_test_period">3000</property>
+
+<!-- création automatique de la base de données -->
+<property name="hibernate.hbm2ddl.auto">update</property>
+<!-- Affiche le SQL dans un Format facilement lisible -->
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+<!-- fichiers de mapping -->
+<!--  <mapping resource="igpde/gestion/domaine/Service.hbm.xml"/> -->
+<mapping class="metier.Adresse"/>
+<mapping class="metier.Evenement"/>
+</session-factory>
+</hibernate-configuration>
