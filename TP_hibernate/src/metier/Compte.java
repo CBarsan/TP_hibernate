@@ -40,6 +40,9 @@ public class Compte {
 		this.dateCompte = dateCompte;
 		this.solde = solde;
 	}
+	public Compte() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 	
