@@ -14,7 +14,9 @@ public class Operation {
 	
 	private int numOperation;
 	private Calendar dateOperation;
+	private int montant;
 	private Compte compte;
+	private boolean operation;
 	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -47,6 +49,18 @@ public class Operation {
 	}
 	public void setCompte(Compte compte) {
 		this.compte = compte;
+	}
+	public int getMontant() {
+		return montant;
+	}
+	public void setMontant(int montant) {
+		this.montant = montant;
+	}
+	public boolean isOperation() {
+		return operation;
+	}
+	public void setOperation(boolean operation) {
+		this.operation = operation;
 	}
 	
 
